@@ -1,0 +1,41 @@
+@using Atividade03.Models
+@model Agendar
+
+@{
+    ViewData["Title"] = "Agendamento";
+}
+
+<div class="text">
+    <h1 class="display-4">PetVet</h1>
+    <br>
+    <h2>Pré-Agendamento</h2>
+    <form asp-action="Agendar" method="POST">
+        <div>
+            <br>
+            <p>
+                <label asp-for="nome">Nome:</label>
+                <input asp-for="nome">
+            </p>
+            <p>
+                <label asp-for="telefone">Telefone:</label>
+                <input asp-for="telefone">
+            </p>
+            <p>
+                <label asp-for="data">Data:</label>
+                <input type="date" asp-for="data">
+            </p>
+            <p>
+                <label asp-for="animal">Animal:</label> 
+                <input type="radio" asp-for="animal" value="Cachorro"/>Cachorro 
+                <input type="radio" asp-for="animal" value="Gato" />Gato
+            </p>
+            <p>
+                <label asp-for="necessidade">Necessidade:</label>
+                <input asp-for="necessidade">
+            </p>
+            @* <input type="submit" onclick="document.location='Confirmacao'" value="Enviar"> *@
+            <input type="submit" value="Enviar">
+            <br>
+        </div>
+    </form>
+</div>

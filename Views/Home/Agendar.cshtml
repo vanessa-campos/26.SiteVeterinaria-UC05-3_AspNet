@@ -1,0 +1,23 @@
+@using Atividade03.Models
+@model List<Agendar>
+@{
+    ViewData["Title"] = "Confirmação";
+}
+
+<div class="text">
+    <h1 class="display-4">PetVet</h1>
+    <br>
+    <h2>Confirmação do Agendamento</h2>
+    <div>
+        <br>
+        @foreach (Agendar item in Model)
+        {
+            <h5>@item.nome</h5>
+            <h5>@item.telefone</h5>
+            <h5>@item.data</h5>
+            <h5>@item.animal</h5>
+            <h5>@item.necessidade</h5>
+            <br>
+        }
+    </div>
+</div>
